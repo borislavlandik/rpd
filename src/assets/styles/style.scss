@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+  /* Color styles */
+  --main-colors-white: #FFFFFF;
+  --main-colors-accent: #2950A9;
+  --main-colors-black: #07172D;
+  
+  --text-colors-dark-gray: #202D3F;
+  --text-colors-gray: #495667;
+  --text-colors-light-gray: #9FA9B7;
+
+  --ui-colors-blue-darkest: #003D99;
+  --ui-colors-blue-dark: #005BE3;
+  --ui-colors-blue-light: #4C94FF;
+  --ui-colors-blue-lightest: #E5F0FF;
+
+  --ui-colors-green-darkest: #19644B;
+  --ui-colors-green-dark: #27BE91;
+  --ui-colors-green-light: #6BE1BE;
+  --ui-colors-green-lightest: #EAFBF6;
+
+  --ui-colors-yellow-darkest: #76490B;
+  --ui-colors-yellow-dark: #D28214;
+  --ui-colors-yellow-light: #F0B25C;
+  --ui-colors-yellow-lightest: #FDF4E8;
+
+  --ui-colors-red-darkest: #990012;
+  --ui-colors-red-dark: #E5001C;
+  --ui-colors-red-light: #FF4C62;
+  --ui-colors-red-lightest: #FFE5E9;
+
+  /* Text-size styles */
+  --font-size-header-h1: 3rem;
+  --font-size-header-h2: 2.25rem;
+  --font-size-header-h3: 1.5rem;
+  --font-size-header-h4: 1.25rem;
+  --font-size-header-h5: 1.125rem;
+  --font-size-header-h6: 1.125rem;
+  --font-size-text-main-default: 1rem;
+  --font-size-text-small-default: 0.875rem;
+
+  /* Effect styles */
+  --shadow-active-element: 0px 2px 0px var(--main-colors-black);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html, body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: var(--font-size-header-h1);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: var(--font-size-header-h2);
+  font-weight: 900;
+}
+
+h3 {
+  font-size: var(--font-size-header-h3);
+  font-weight: 800;
+}
+
+h4 {
+  font-size: var(--font-size-header-h4);
+  font-weight: 800;
+}
+
+h5 {
+  font-size: var(--font-size-header-h5);
+  font-weight: 800;
+}
+
+h6 {
+  font-size: var(--font-size-header-h6);
+  font-weight: 800;
+  text-transform: uppercase;
+}
