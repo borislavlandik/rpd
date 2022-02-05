@@ -7,12 +7,12 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "icons:update": "node ./scripts/update-icons-sprite.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
-    "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
@@ -38,14 +38,21 @@
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "svg-sprite": "^1.5.3",
     "typescript": "~4.1.5"
   },
   "eslintConfig": {
     "root": true,
+    "globals": {
+      "defineProps": "readonly",
+      "defineEmits": "readonly",
+      "withDefaults": "readonly"
+    },
     "env": {
       "node": true
     },
     "extends": [
+      "plugin:vue/base",
       "plugin:vue/vue3-essential",
       "@vue/airbnb",
       "@vue/typescript/recommended"
@@ -53,7 +60,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
+    "rules": {
+      "vue/script-setup-uses-vars": "error"
+    },
     "overrides": [
       {
         "files": [

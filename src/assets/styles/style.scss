@@ -44,6 +44,8 @@
   --shadow-active-element: 0px 2px 0px var(--main-colors-black);
 }
 
+/* Reset styles */
+
 *,
 *::before,
 *::after {
@@ -78,7 +80,6 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 ul[class],
@@ -106,7 +107,10 @@ select {
   font: inherit;
 }
 
+/* Default styles */
+
 html, body {
+  font-size: 16px;
   font-family: 'Inter', sans-serif;
 }
 
@@ -139,4 +143,9 @@ h6 {
   font-size: var(--font-size-header-h6);
   font-weight: 800;
   text-transform: uppercase;
+}
+
+p {
+  font-size: var(--font-size-text-main-default);
+  font-weight: 400;
 }
