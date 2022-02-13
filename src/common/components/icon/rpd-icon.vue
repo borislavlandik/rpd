@@ -28,6 +28,10 @@ withDefaults(defineProps<IIconProps>(), {
 </template>
 
 <style scoped lang="scss">
+.rpd-icon {
+  display: block;
+}
+
 .rpd-icon_left {
   margin-right: .5rem;
 }

@@ -25,10 +25,10 @@ const emit = defineEmits<IButtonEmits>();
 
 <template>
   <button
-    @click="emit('click', $event);"
     class="button"
     :class="[ 'button_style_' + appearance, 'button_size_' + size, { 'button_icon': icon } ]"
     :disabled="disabled"
+    @click="emit('click', $event);"
   >
     <slot></slot>
   </button>
@@ -49,7 +49,7 @@ const emit = defineEmits<IButtonEmits>();
 
   font-weight: 700;
 
-  transition-property: background-color, color;
+  transition-property: background-color, color, box-shadow;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
 
