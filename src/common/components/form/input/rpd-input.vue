@@ -57,6 +57,7 @@ const iconName = computed(() => {
   <div class="input-wrapper">
     <label class="input-title">
       <slot></slot>
+      <span class="input-title__required" v-show="required">*</span>
     </label>
     <span
       class="input"
@@ -87,7 +88,6 @@ const iconName = computed(() => {
 </template>
 
 <style scoped lang="scss">
-
 .input-wrapper {
   display: inline-flex;
   flex-direction: column;
@@ -99,6 +99,10 @@ const iconName = computed(() => {
   margin-left: 1rem;
 
   font-weight: 700;
+}
+
+.input-title__required {
+  margin-left: -.25rem;
 }
 
 .input-hint {
@@ -184,5 +188,4 @@ const iconName = computed(() => {
 
   transform: translateY(-50%);
 }
-
 </style>

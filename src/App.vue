@@ -26,6 +26,7 @@ const { valid, invalid, errors } = useValidation(formState, {
     <rpd-input
       v-model="formState.value"
       placeholder="Текст-подсказка"
+      required
     >
       <template v-slot:default>
         Значение
@@ -37,6 +38,7 @@ const { valid, invalid, errors } = useValidation(formState, {
     <rpd-input
       v-model="formState.password"
       placeholder="Текст-пароль"
+      required
     >
       <template v-slot:default>
         Пароль
