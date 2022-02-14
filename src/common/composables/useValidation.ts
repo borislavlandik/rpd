@@ -38,7 +38,7 @@ function useValidation<T extends Record<string, string | number>>(
   const invalid = computed(() => !valid.value);
   const errors = ref<IValidationError<T>>({} as IValidationError<T>);
 
-  function setDefaultValues(): void {
+  function resetErrors(): void {
     const model = unref(formValue);
     (Object.keys(model) as Array<keyof T>).forEach(
       (key) => { errors.value[key] = []; },
@@ -46,7 +46,7 @@ function useValidation<T extends Record<string, string | number>>(
   }
 
   function validate(): void {
-    setDefaultValues();
+    resetErrors();
 
     const model = unref(formValue);
     let hasErrors = false;
