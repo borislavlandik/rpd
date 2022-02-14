@@ -11,8 +11,9 @@
     "icons:update": "node ./scripts/update-icons-sprite.js"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0",
+    "@vueuse/core": "^7.6.2",
+    "core-js": "^3.21.0",
+    "vue": "^3.2.31",
     "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
@@ -26,7 +27,7 @@
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-unit-mocha": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/compiler-sfc": "^3.2.31",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.0-0",
@@ -61,7 +62,8 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "vue/script-setup-uses-vars": "error"
+      "vue/script-setup-uses-vars": "error",
+      "import/prefer-default-export": "off"
     },
     "overrides": [
       {
