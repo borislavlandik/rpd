@@ -1,0 +1,22 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-colors-black) var(--text-colors-extra-light-gray);
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 2px;
+
+  background-color: var(--text-colors-extra-light-gray);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+
+  background-color: var(--main-colors-black);
+}
