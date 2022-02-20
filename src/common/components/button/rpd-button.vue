@@ -91,12 +91,12 @@ const emit = defineEmits<IButtonEmits>();
 
   &::before {
     display: block;
-    height: 0px;
+    height: 0;
     width: 100%;
 
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
 
     z-index: -1;
 
@@ -124,8 +124,8 @@ const emit = defineEmits<IButtonEmits>();
       color: var(--rpd-button-hover-text-color, var(--main-colors-black));
 
       &::before {
-        top: 0px;
-        height: 0px;
+        top: 0;
+        height: 0;
       }
     }
 

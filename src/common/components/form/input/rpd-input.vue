@@ -118,6 +118,7 @@ const iconName = computed(() => {
 
 .input__text {
   width: 100%;
+  height: 2.5rem;
 
   padding: .5rem .5rem .5rem 1rem;
   margin: 0;
@@ -132,6 +133,10 @@ const iconName = computed(() => {
   transition-property: box-shadow, color;
   transition-duration: 100ms;
   transition-timing-function: ease-in-out;
+
+  &::placeholder {
+    color: var(--text-colors-gray);
+  }
 }
 
 .input__text:focus {

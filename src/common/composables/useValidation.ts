@@ -12,8 +12,10 @@ export interface IValidationFunctionReturn {
   errorMessage: string;
 }
 
+export type IValidationModelTypes = number | string | string[];
+
 export type IValidationFunction
-  = (value: string | number) => IValidationFunctionReturn;
+  = (value: IValidationModelTypes) => IValidationFunctionReturn;
 
 export type IValidationConfig<T> = {
   [K in keyof T]?: IValidationFunction[];
@@ -30,7 +32,7 @@ export interface IValidationReturn<T> {
   errors: Ref<IValidationError<T>>;
 }
 
-function useValidation<T extends Record<string, string | number>>(
+function useValidation<T extends Record<string, IValidationModelTypes>>(
   formValue: MaybeRef<T>,
   config: IValidationConfig<T>,
 ): IValidationReturn<T> {
