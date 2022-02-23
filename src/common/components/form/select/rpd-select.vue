@@ -4,10 +4,16 @@ import { useVModel } from '@vueuse/core';
 import RpdIcon from '@/common/components/icon/rpd-icon.vue';
 import { pluralizeWithNumber } from '@/common/utils/pluralize';
 
-interface IFormInputProps {
+export interface IFormSelectOption {
+  value: string;
+  label: string;
+  disabled?: boolean;
+}
+
+interface IFormSelectProps {
   modelValue?: string | string[];
 
-  options: string[] | { value: string; label: string; disabled?: boolean }[];
+  options: string[] | IFormSelectOption[];
 
   mode?: 'single' | 'multiple' | 'tags';
   searchable?: boolean;
@@ -17,11 +23,11 @@ interface IFormInputProps {
   placeholder?: string;
 }
 
-interface IFromInputEmits {
+interface IFromSelectEmits {
   (event: 'update:modelValue', data: string): void,
 }
 
-const props = withDefaults(defineProps<IFormInputProps>(), {
+const props = withDefaults(defineProps<IFormSelectProps>(), {
   mode: 'single',
   searchable: true,
   closeOnSelect: true,
@@ -29,7 +35,7 @@ const props = withDefaults(defineProps<IFormInputProps>(), {
   disabled: false,
 });
 
-const emit = defineEmits<IFromInputEmits>();
+const emit = defineEmits<IFromSelectEmits>();
 
 const value = useVModel(props, 'modelValue', emit);
 
