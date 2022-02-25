@@ -117,12 +117,12 @@ function defaultMultipleLabel(selectedValues: string[]): string {
 
 .select-title {
   margin-left: 1rem;
-
-  font-weight: 700;
 }
 
 .select-title__required {
   margin-left: -.25rem;
+
+  color: var(--ui-colors-red-dark);
 }
 
 .select-hint {

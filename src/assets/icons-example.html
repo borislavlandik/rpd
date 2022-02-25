@@ -21,6 +21,9 @@ They might well be outsourced to an external stylesheet of course.
 <style type="text/css">
 	.svg-arrow-down-dims { width: 24px; height: 24px; }
 	.svg-arrow-right-dims { width: 24px; height: 24px; }
+	.svg-content-indent-left-dims { width: 24px; height: 24px; }
+	.svg-content-indent-right-dims { width: 24px; height: 24px; }
+	.svg-ui-check-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-check-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-close-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-error-dims { width: 24px; height: 24px; }
@@ -52,6 +55,9 @@ for further details on how to create this embeddable sprite variant.
 <svg width="0" height="0" style="position:absolute">
 		<symbol fill="none" viewBox="0 0 24 24" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M17 9.17a1 1 0 00-1.41 0L12 12.71 8.46 9.17a1 1 0 10-1.41 1.42l4.24 4.24a1.001 1.001 0 001.42 0L17 10.59a.999.999 0 000-1.42z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 11.29l-4.24-4.24a1 1 0 10-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 000 1.41 1 1 0 00.71.29 1 1 0 00.71-.29l4.24-4.24a1.002 1.002 0 000-1.42z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="content-indent-left" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18a1 1 0 100-2H3a1 1 0 000 2zm0 4h10a1 1 0 000-2H3a1 1 0 000 2zm18.77-1.31a1 1 0 00-1.41-.12l-2 1.66a1 1 0 000 1.54l2 1.66a1 1 0 00.64.24 1.001 1.001 0 00.64-1.77l-1.08-.9 1.08-.9a.997.997 0 00.13-1.41zM21 17H3a1 1 0 000 2h18a1 1 0 000-2zM3 15h10a1 1 0 000-2H3a1 1 0 000 2z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="content-indent-right" xmlns="http://www.w3.org/2000/svg"><path d="M3 15h10a1 1 0 000-2H3a1 1 0 000 2zm0-4h10a1 1 0 000-2H3a1 1 0 000 2zm0-4h18a1 1 0 100-2H3a1 1 0 000 2zm18 10H3a1 1 0 000 2h18a1 1 0 000-2zm-1.36-7.43a1 1 0 10-1.28 1.53l1.08.9-1.08.9a.997.997 0 00-.13 1.41 1 1 0 00.77.36 1 1 0 00.64-.24l2-1.66a1 1 0 000-1.54l-2-1.66z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="ui-check" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 7.21a.999.999 0 00-1.42 0l-7.45 7.46-3.13-3.14A1.02 1.02 0 105.29 13l3.84 3.84a1 1 0 001.42 0l8.16-8.16a.999.999 0 000-1.47z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-check" xmlns="http://www.w3.org/2000/svg"><path d="M14.72 8.79l-4.29 4.3-1.65-1.65a1 1 0 10-1.41 1.41l2.35 2.36a1 1 0 001.41 0l5-5a1.002 1.002 0 10-1.41-1.42zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16.001A8 8 0 0112 20z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-close" xmlns="http://www.w3.org/2000/svg"><path d="M15.71 8.29a1 1 0 00-1.42 0L12 10.59l-2.29-2.3a1.004 1.004 0 10-1.42 1.42l2.3 2.29-2.3 2.29a.999.999 0 000 1.42 1 1 0 001.42 0l2.29-2.3 2.29 2.3a.998.998 0 001.42 0 1.001 1.001 0 000-1.42L13.41 12l2.3-2.29a1.001 1.001 0 000-1.42zm3.36-3.36A10 10 0 104.93 19.07 10 10 0 1019.07 4.93zm-1.41 12.73A8 8 0 1120 12a7.95 7.95 0 01-2.34 5.66z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-error" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1zm.92 8.62a.758.758 0 00-.09-.18l-.12-.15a.999.999 0 00-1.09-.21 1.15 1.15 0 00-.33.21A1 1 0 0011 16c.002.13.029.26.08.38a.9.9 0 00.54.54.94.94 0 00.76 0 .9.9 0 00.54-.54c.051-.12.078-.25.08-.38a1.362 1.362 0 000-.2.639.639 0 00-.08-.18zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16.001A8 8 0 0112 20z" fill="#07172D"/></symbol>
@@ -109,6 +115,39 @@ embedded above. They may be styled via CSS.
 
 					</div>
 					<h2>arrow-right</h2>
+				</li>
+				<li title="content-indent-left">
+					<div class="icon-box">
+
+						<!-- content-indent-left -->
+						<svg class="svg-content-indent-left-dims">
+							<use xlink:href="#content-indent-left"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-left</h2>
+				</li>
+				<li title="content-indent-right">
+					<div class="icon-box">
+
+						<!-- content-indent-right -->
+						<svg class="svg-content-indent-right-dims">
+							<use xlink:href="#content-indent-right"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-right</h2>
+				</li>
+				<li title="ui-check">
+					<div class="icon-box">
+
+						<!-- ui-check -->
+						<svg class="svg-ui-check-dims">
+							<use xlink:href="#ui-check"></use>
+						</svg>
+
+					</div>
+					<h2>ui-check</h2>
 				</li>
 				<li title="ui-circle-check">
 					<div class="icon-box">
@@ -230,6 +269,39 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>arrow-right</h2>
 				</li>
+				<li title="content-indent-left">
+					<div class="icon-box">
+
+						<!-- content-indent-left -->
+						<svg class="svg-content-indent-left-dims">
+							<use xlink:href="sprite.svg#content-indent-left"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-left</h2>
+				</li>
+				<li title="content-indent-right">
+					<div class="icon-box">
+
+						<!-- content-indent-right -->
+						<svg class="svg-content-indent-right-dims">
+							<use xlink:href="sprite.svg#content-indent-right"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-right</h2>
+				</li>
+				<li title="ui-check">
+					<div class="icon-box">
+
+						<!-- ui-check -->
+						<svg class="svg-ui-check-dims">
+							<use xlink:href="sprite.svg#ui-check"></use>
+						</svg>
+
+					</div>
+					<h2>ui-check</h2>
+				</li>
 				<li title="ui-circle-check">
 					<div class="icon-box">
 
@@ -315,7 +387,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Tue, 22 Feb 2022 15:14:04 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Thu, 24 Feb 2022 11:09:54 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

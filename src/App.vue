@@ -42,14 +42,16 @@ $maxWidth: 1376px;
   margin: 0 auto;
 }
 .app__main {
-  width: 100%;
-  max-width: $maxWidth;
-
-  margin: 0 auto;
+  padding: 0 32px;
 }
 
 .app__content {
   position: relative;
+
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: $maxWidth;
 }
 
 .app__router {
@@ -61,8 +63,10 @@ $maxWidth: 1376px;
 }
 
 .app__breadcrumbs {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem auto 1rem;
+
+  width: 100%;
+  max-width: $maxWidth;
 }
 
 .fade-enter-active,
