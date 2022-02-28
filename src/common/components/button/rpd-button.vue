@@ -6,6 +6,7 @@ interface IButtonProps {
   appearance?: IButtonApeerance;
   size?: IButtonSizes;
   disabled?: boolean;
+  icon?: boolean;
 }
 
 interface IButtonEmits {
@@ -24,7 +25,11 @@ const emit = defineEmits<IButtonEmits>();
 <template>
   <button
     class="button"
-    :class="[ 'button_style_' + appearance, 'button_size_' + size ]"
+    :class="[
+      'button_style_' + appearance,
+      'button_size_' + size,
+      { 'button_icon': icon },
+    ]"
     :disabled="disabled"
     @click="emit('click', $event);"
   >
