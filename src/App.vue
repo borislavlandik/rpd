@@ -22,6 +22,9 @@ import RpdBreadcrumbs from '@/common/components/breadcrumbs/rpd-breadcrumbs.vue'
   </div>
 </template>
 
+<style src="@/assets/styles/style.scss" lang="scss"></style>
+<style src="@/assets/styles/components/tooltip.scss" lang="scss"></style>
+
 <style scoped lang="scss">
 $maxWidth: 1376px;
 
