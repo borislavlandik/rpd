@@ -134,7 +134,7 @@ function isActive(routeName: string): boolean {
         {{ isSimplified ? 'Струк.' : 'Структура рабочей программы'}}
       </h3>
       <rpd-button
-        v-tooltip.top="{
+        v-tooltip.top-end="{
           content: isSimplified ? 'Раскрыть меню' : 'Скрыть меню'
         }"
         @click="toggleMenu()"

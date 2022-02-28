@@ -24,6 +24,7 @@ export const mainRotes: Array<RouteRecordRaw> = [
     name: 'list',
     component: () => import('@/views/List.vue'),
     meta: {
+      canShowAddButton: true,
       breadcrumbs: 'Список дисциплин',
     },
   },

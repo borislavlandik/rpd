@@ -5,6 +5,7 @@ interface IIconProps {
   height?: number;
   left?: boolean;
   right?: boolean;
+  inline?: boolean;
 }
 
 withDefaults(defineProps<IIconProps>(), {
@@ -16,9 +17,15 @@ withDefaults(defineProps<IIconProps>(), {
 <template>
 <svg
   class="rpd-icon"
-  :class="[iconName, { 'rpd-icon_left': left }, { 'rpd-icon_right': right }]"
+  :class="[
+    iconName,
+    { 'rpd-icon_left': left },
+    { 'rpd-icon_right': right },
+    { 'rpd-icon_inline': inline }
+  ]"
   :width="width"
   :height="height"
+  :style="{ minWidth: `${width}px`, minHeight: `${height}px` }"
 >
   <use
     v-bind="{ 'xlink:href': require('@/assets/sprite.svg') + `#${iconName}` }"
@@ -30,6 +37,10 @@ withDefaults(defineProps<IIconProps>(), {
 <style scoped lang="scss">
 .rpd-icon {
   display: block;
+}
+
+.rpd-icon_inline {
+  display: inline-block;
 }
 
 .rpd-icon_left {
