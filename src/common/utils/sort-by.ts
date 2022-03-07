@@ -1,8 +1,8 @@
 /**
- * Sort list ascending by property
+ * Сортировка списка объектов по заданному свойству по возрастанию
  *
- * @param list - list to sort
- * @param prop - property name
+ * @param list - список для сорировки
+ * @param prop - ключ свойства
  */
 export function sortByAsc<T>(list: Array<T>, prop: keyof T): Array<T> {
   return list.sort((a, b) => {
@@ -19,10 +19,10 @@ export function sortByAsc<T>(list: Array<T>, prop: keyof T): Array<T> {
 }
 
 /**
- * Sort list descending by property
+ * Сортировка списка объектов по заданному свойству по убыванию
  *
- * @param list - list to sort
- * @param prop - property name
+ * @param list - список для сорировки
+ * @param prop - ключ свойства
  */
 export function sortByDesc<T>(list: Array<T>, prop: keyof T): Array<T> {
   return sortByAsc(list, prop).reverse();
