@@ -5,7 +5,9 @@ import RpdEditorMenu from '@/common/components/editor/menu/rpd-editor-menu.vue';
 <template>
   <div class="editor">
     <div class="editor__content">
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <component :is="Component"></component>
+      </router-view>
     </div>
     <div class="editor__menu">
       <rpd-editor-menu></rpd-editor-menu>

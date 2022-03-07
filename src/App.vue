@@ -14,7 +14,7 @@ import RpdBreadcrumbs from '@/common/components/breadcrumbs/rpd-breadcrumbs.vue'
       <div class="app__content">
         <router-view class="app__router" v-slot="{ Component, route }">
           <transition name="fade">
-            <component :is="Component" :key="route.path"></component>
+            <component :is="Component" :key="route.fullPath"></component>
           </transition>
         </router-view>
       </div>

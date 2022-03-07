@@ -13,7 +13,7 @@ export interface IFormSelectOption {
 interface IFormSelectProps {
   modelValue?: string | string[];
 
-  options: string[] | IFormSelectOption[];
+  options?: string[] | IFormSelectOption[];
 
   mode?: 'single' | 'multiple' | 'tags';
   searchable?: boolean;
@@ -54,7 +54,7 @@ function defaultMultipleLabel(selectedValues: string[]): string {
     <span class="select">
       <Multiselect
         v-model="value"
-        :options="options"
+        :options="options ?? []"
         :no-options-text="'Список пустой'"
         :no-results-text="'Результатов не найдено'"
         :hide-selected="false"

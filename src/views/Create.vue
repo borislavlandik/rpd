@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import RpdButton from '@/common/components/button/rpd-button.vue';
 import RpdInput from '@/common/components/form/input/rpd-input.vue';
 import RpdSelect, { IFormSelectOption } from '@/common/components/form/select/rpd-select.vue';
+import { useRouter } from 'vue-router';
 
 interface ICreateRpdForm {
   subject: string;
@@ -54,6 +55,8 @@ const degrees: IFormSelectOption[] = [
     value: '2',
   },
 ];
+
+const router = useRouter();
 </script>
 
 <template>
@@ -137,11 +140,9 @@ const degrees: IFormSelectOption[] = [
         Сохранить
       </rpd-button>
 
-      <router-link to="-1" custom v-slot="{ navigate }">
-        <rpd-button appearance="outline" @click="navigate">
-          Отменить
-        </rpd-button>
-      </router-link>
+      <rpd-button type="button" appearance="outline" @click="router.go(-1)">
+        Отменить
+      </rpd-button>
     </div>
   </form>
 </template>
