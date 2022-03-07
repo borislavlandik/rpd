@@ -181,6 +181,8 @@ function isActive(routeName: string): boolean {
 .editor-menu {
   width: 350px;
 
+  transition: width .3s ease-in-out;
+
   &.editor-menu_simplified {
     width: 88px;
   }
@@ -199,6 +201,10 @@ function isActive(routeName: string): boolean {
 
   font-size: 1rem;
   font-weight: 700;
+
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .nav {
@@ -226,6 +232,9 @@ function isActive(routeName: string): boolean {
   font-size: .75rem;
   text-align: left;
   line-height: 1.5rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 
   cursor: pointer;
 
