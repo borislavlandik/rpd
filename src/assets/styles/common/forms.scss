@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  width: 100%;
+  max-width: 50rem;
+}
+  
+.form__group {
+  display: flex;
+  gap: 1rem;
+
+  & > * {
+    flex: 1;
+  }
+}

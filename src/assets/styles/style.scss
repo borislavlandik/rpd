@@ -6,7 +6,7 @@
   --main-colors-white: #FFFFFF;
   --main-colors-accent: #2950A9;
   --main-colors-black: #07172D;
-  
+
   --text-colors-dark-gray: #202D3F;
   --text-colors-gray: #495667;
   --text-colors-light-gray: #9FA9B7;
@@ -46,3 +46,4 @@
 @import './common/normalize';
 @import './common/scrollbars';
 @import './common/text';
+@import './common/forms';
