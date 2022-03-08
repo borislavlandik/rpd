@@ -3,6 +3,7 @@ import Multiselect from '@vueform/multiselect';
 import { useVModel } from '@vueuse/core';
 import RpdIcon from '@/common/components/icon/rpd-icon.vue';
 import { pluralizeWithNumber } from '@/common/utils/pluralize';
+import { joinLocal } from '@/common/utils/array-join-local';
 
 export interface IFormSelectOption {
   value: string;
@@ -11,9 +12,9 @@ export interface IFormSelectOption {
 }
 
 interface IFormSelectProps {
-  modelValue?: string | string[];
+  modelValue?: number | number[] | string | string[];
 
-  options?: string[] | IFormSelectOption[];
+  options?: number[] | string[] | IFormSelectOption[];
 
   mode?: 'single' | 'multiple' | 'tags';
   searchable?: boolean;
@@ -21,6 +22,8 @@ interface IFormSelectProps {
   required?: boolean;
   disabled?: boolean;
   placeholder?: string;
+
+  multipleLabel?: 'default' | 'values';
 }
 
 interface IFromSelectEmits {
@@ -33,16 +36,31 @@ const props = withDefaults(defineProps<IFormSelectProps>(), {
   closeOnSelect: true,
   required: false,
   disabled: false,
+  multipleLabel: 'default',
 });
 
 const emit = defineEmits<IFromSelectEmits>();
 
 const value = useVModel(props, 'modelValue', emit);
 
-function defaultMultipleLabel(selectedValues: string[]): string {
+function defaultMultipleLabel(selectedValues: IFormSelectOption[]): string {
   return `Выбрано ${pluralizeWithNumber(selectedValues.length, ['значение', 'значения', 'значений'])}`;
 }
 
+function valuesMultipleLabel(selectedValues: IFormSelectOption[]): string {
+  return joinLocal(selectedValues.map((v) => v.label).sort());
+}
+
+function getMultipleLabel(selectedValues: IFormSelectOption[]): string {
+  switch (props.multipleLabel) {
+    case 'default':
+      return defaultMultipleLabel(selectedValues);
+    case 'values':
+      return valuesMultipleLabel(selectedValues);
+    default:
+      return '';
+  }
+}
 </script>
 
 <template>
@@ -58,7 +76,7 @@ function defaultMultipleLabel(selectedValues: string[]): string {
         :no-options-text="'Список пустой'"
         :no-results-text="'Результатов не найдено'"
         :hide-selected="false"
-        :multiple-label="defaultMultipleLabel"
+        :multiple-label="getMultipleLabel"
 
         :mode="mode"
         :searchable="searchable"

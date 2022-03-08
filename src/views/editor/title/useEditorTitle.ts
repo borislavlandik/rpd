@@ -7,7 +7,7 @@ interface IEditorTitleApiResponse {
   specialty_code: string;
   courses: number[];
   specialty: string;
-  year: 2018,
+  year: number;
   subject: string;
   chair: string;
   study_form: string;
