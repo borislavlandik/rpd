@@ -20,7 +20,6 @@ const {
   isAscSort,
   sortButtons,
 } = useViewList();
-
 </script>
 
 <template>
@@ -210,6 +209,10 @@ const {
   gap: .5rem;
 
   height: 40px;
+}
+
+.list {
+  padding-bottom: 2rem;
 }
 
 .list__title {

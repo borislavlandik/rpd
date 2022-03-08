@@ -47,6 +47,7 @@ export const mainRotes: Array<RouteRecordRaw> = [
     children: editorRoutes,
     meta: {
       breadcrumbs: 'Рабочая программа',
+      breadcrumbsGlobalStore: 'subject',
     },
   },
   {

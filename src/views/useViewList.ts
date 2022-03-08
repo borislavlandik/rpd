@@ -1,41 +1,20 @@
+import {
+  ref,
+  computed,
+  Ref,
+  watch,
+} from 'vue';
+
 import { useBaseAPI } from '@/api';
-
-import { ref, computed, Ref } from 'vue';
 import { sortByAsc, sortByDesc } from '@/common/utils/sort-by';
-
-interface IListFormFilters {
-  chair: string;
-  specialty: string;
-  degree: string;
-  year: string;
-  subject: string;
-}
-
-interface IListSubject {
-  id: string;
-  subject: string;
-  specialty_code: string;
-  specialty: string;
-  learning_profile: string;
-  study_form: string;
-  year: string;
-  last_edit: string;
-  creation_date: string;
-  status: string;
-}
-
-type IListFormFiltersOptions = Record<keyof IListFormFilters, string[]>;
-
-interface IListApiResponse {
-  filters: IListFormFiltersOptions;
-  subjects: IListSubject[];
-}
-
-interface IListSortButton {
-  key: keyof IListSubject;
-  title: string;
-  sort: () => void;
-}
+import { useGlobalRpdStore } from '@/store/storeCurrentRpd';
+import {
+  IListFormFilters,
+  IListFormFiltersOptions,
+  IListSubject,
+  IListSortButton,
+  IListApiResponse,
+} from './useViewList.interface';
 
 interface IListUseReturnType {
   isLoading: Ref<boolean>;
@@ -81,7 +60,7 @@ function useViewList(): IListUseReturnType {
 
   const filterForm = ref<IListFormFilters>({ ...defaultFilterValues });
 
-  const { data, isLoading } = useBaseAPI<IListApiResponse>('/programs');
+  const { data, isLoading, isFinished } = useBaseAPI<IListApiResponse>('/programs');
   const subjects = computed(() => data.value?.subjects ?? []);
   const filters: Ref<IListFormFiltersOptions> = computed(() => data.value?.filters
     ?? defaultFilterOptionsValues);
@@ -104,6 +83,8 @@ function useViewList(): IListUseReturnType {
   const sortBy = ref<keyof IListSubject>('subject');
   const isAscSort = ref(true);
   const sortByMsg = computed(() => getSortNameMsg(sortBy.value));
+
+  const globalRpdStore = useGlobalRpdStore();
 
   const sortedSubjects = computed(
     () => (isAscSort.value
@@ -130,6 +111,12 @@ function useViewList(): IListUseReturnType {
   function toggleSort(): void {
     isAscSort.value = !isAscSort.value;
   }
+
+  watch(isFinished, (value) => {
+    if (value) {
+      globalRpdStore.list = subjects.value;
+    }
+  });
 
   const sortButtons = (Object.keys(defaultSubjectValues) as Array<keyof IListSubject>).map(
     (key) => ({
