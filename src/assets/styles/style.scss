@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+@import "~floating-vue/dist/style.css";
 
 :root {
   /* Color styles */
   --main-colors-white: #FFFFFF;
   --main-colors-accent: #2950A9;
   --main-colors-black: #07172D;
-  
+
   --text-colors-dark-gray: #202D3F;
   --text-colors-gray: #495667;
   --text-colors-light-gray: #9FA9B7;
@@ -45,3 +46,4 @@
 @import './common/normalize';
 @import './common/scrollbars';
 @import './common/text';
+@import './common/forms';

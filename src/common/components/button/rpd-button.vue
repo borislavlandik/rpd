@@ -17,7 +17,6 @@ withDefaults(defineProps<IButtonProps>(), {
   appearance: 'default',
   size: 'default',
   disabled: false,
-  icon: false,
 });
 
 const emit = defineEmits<IButtonEmits>();
@@ -26,7 +25,11 @@ const emit = defineEmits<IButtonEmits>();
 <template>
   <button
     class="button"
-    :class="[ 'button_style_' + appearance, 'button_size_' + size, { 'button_icon': icon } ]"
+    :class="[
+      'button_style_' + appearance,
+      'button_size_' + size,
+      { 'button_icon': icon },
+    ]"
     :disabled="disabled"
     @click="emit('click', $event);"
   >

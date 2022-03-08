@@ -20,7 +20,15 @@ They might well be outsourced to an external stylesheet of course.
 
 <style type="text/css">
 	.svg-arrow-down-dims { width: 24px; height: 24px; }
+	.svg-arrow-down-chevron-dims { width: 24px; height: 24px; }
+	.svg-arrow-download-dims { width: 24px; height: 24px; }
 	.svg-arrow-right-dims { width: 24px; height: 24px; }
+	.svg-arrow-up-chevron-dims { width: 24px; height: 24px; }
+	.svg-arrow-vertical-align-center-dims { width: 24px; height: 24px; }
+	.svg-content-indent-left-dims { width: 24px; height: 24px; }
+	.svg-content-indent-right-dims { width: 24px; height: 24px; }
+	.svg-file-copy-document-dims { width: 24px; height: 24px; }
+	.svg-ui-check-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-check-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-close-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-error-dims { width: 24px; height: 24px; }
@@ -28,6 +36,8 @@ They might well be outsourced to an external stylesheet of course.
 	.svg-ui-circle-new-dims { width: 24px; height: 24px; }
 	.svg-ui-circle-question-dims { width: 24px; height: 24px; }
 	.svg-ui-close-dims { width: 24px; height: 24px; }
+	.svg-ui-pen-dims { width: 24px; height: 24px; }
+	.svg-ui-trash-dims { width: 24px; height: 24px; }
 </style>
 <!--
 ====================================================================================================
@@ -51,7 +61,15 @@ for further details on how to create this embeddable sprite variant.
 
 <svg width="0" height="0" style="position:absolute">
 		<symbol fill="none" viewBox="0 0 24 24" id="arrow-down" xmlns="http://www.w3.org/2000/svg"><path d="M17 9.17a1 1 0 00-1.41 0L12 12.71 8.46 9.17a1 1 0 10-1.41 1.42l4.24 4.24a1.001 1.001 0 001.42 0L17 10.59a.999.999 0 000-1.42z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="arrow-down-chevron" xmlns="http://www.w3.org/2000/svg"><path d="M11.29 11.46a1.002 1.002 0 001.42 0l3-3A1.018 1.018 0 1014.29 7L12 9.34 9.71 7a1.018 1.018 0 00-1.42 1.46l3 3zm3 1.08L12 14.84l-2.29-2.3A1.018 1.018 0 108.29 14l3 3a1.002 1.002 0 001.42 0l3-3a1.004 1.004 0 10-1.42-1.42v-.04z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="arrow-download" xmlns="http://www.w3.org/2000/svg"><path d="M8.29 13.29a1 1 0 000 1.42l3 3a1.002 1.002 0 001.42 0l3-3a1.004 1.004 0 10-1.42-1.42L13 14.59V3a1 1 0 00-2 0v11.59l-1.29-1.3a1 1 0 00-1.42 0zM18 9h-2a1 1 0 100 2h2a1 1 0 011 1v7a1 1 0 01-1 1H6a1 1 0 01-1-1v-7a1 1 0 011-1h2a1 1 0 000-2H6a3 3 0 00-3 3v7a3 3 0 003 3h12a3 3 0 003-3v-7a3 3 0 00-3-3z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="arrow-right" xmlns="http://www.w3.org/2000/svg"><path d="M14.83 11.29l-4.24-4.24a1 1 0 10-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 000 1.41 1 1 0 00.71.29 1 1 0 00.71-.29l4.24-4.24a1.002 1.002 0 000-1.42z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="arrow-up-chevron" xmlns="http://www.w3.org/2000/svg"><path d="M12.71 12.54a1 1 0 00-1.42 0l-3 3A1.018 1.018 0 009.71 17L12 14.66 14.29 17a1.002 1.002 0 001.639-.325 1 1 0 00-.219-1.095l-3-3.04zm-3-1.08L12 9.16l2.29 2.3a1.002 1.002 0 001.639-.325 1 1 0 00-.219-1.095l-3-3a.999.999 0 00-1.42 0l-3 3a1.004 1.004 0 001.42 1.42z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="arrow-vertical-align-center" xmlns="http://www.w3.org/2000/svg"><path d="M10.21 6.21l.79-.8V8a1 1 0 002 0V5.41l.79.8a1 1 0 001.639-.325 1 1 0 00-.219-1.095l-2.5-2.5a1 1 0 00-.33-.21 1 1 0 00-.76 0 1 1 0 00-.33.21l-2.5 2.5a1.004 1.004 0 001.42 1.42zM16 11H8a1 1 0 000 2h8a1 1 0 000-2zm-2.21 6.79l-.79.8V16a1 1 0 00-2 0v2.59l-.79-.8a1.005 1.005 0 00-1.42 1.42l2.5 2.5a1 1 0 00.33.21.94.94 0 00.76 0 1 1 0 00.33-.21l2.5-2.5a1.004 1.004 0 10-1.42-1.42z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="content-indent-left" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18a1 1 0 100-2H3a1 1 0 000 2zm0 4h10a1 1 0 000-2H3a1 1 0 000 2zm18.77-1.31a1 1 0 00-1.41-.12l-2 1.66a1 1 0 000 1.54l2 1.66a1 1 0 00.64.24 1.001 1.001 0 00.64-1.77l-1.08-.9 1.08-.9a.997.997 0 00.13-1.41zM21 17H3a1 1 0 000 2h18a1 1 0 000-2zM3 15h10a1 1 0 000-2H3a1 1 0 000 2z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="content-indent-right" xmlns="http://www.w3.org/2000/svg"><path d="M3 15h10a1 1 0 000-2H3a1 1 0 000 2zm0-4h10a1 1 0 000-2H3a1 1 0 000 2zm0-4h18a1 1 0 100-2H3a1 1 0 000 2zm18 10H3a1 1 0 000 2h18a1 1 0 000-2zm-1.36-7.43a1 1 0 10-1.28 1.53l1.08.9-1.08.9a.997.997 0 00-.13 1.41 1 1 0 00.77.36 1 1 0 00.64-.24l2-1.66a1 1 0 000-1.54l-2-1.66z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="file-copy-document" xmlns="http://www.w3.org/2000/svg"><path d="M16 20H8a3 3 0 01-3-3V7a1 1 0 00-2 0v10a5 5 0 005 5h8a1 1 0 000-2zm5-11.06a1.307 1.307 0 00-.06-.27v-.09a1.07 1.07 0 00-.19-.28l-6-6a1.071 1.071 0 00-.28-.19h-.09L14.06 2H10a3 3 0 00-3 3v10a3 3 0 003 3h8a3 3 0 003-3V9v-.06zm-6-3.53L17.59 8H16a1 1 0 01-1-1V5.41zM19 15a1 1 0 01-1 1h-8a1 1 0 01-1-1V5a1 1 0 011-1h3v3a3 3 0 003 3h3v5z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="ui-check" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 7.21a.999.999 0 00-1.42 0l-7.45 7.46-3.13-3.14A1.02 1.02 0 105.29 13l3.84 3.84a1 1 0 001.42 0l8.16-8.16a.999.999 0 000-1.47z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-check" xmlns="http://www.w3.org/2000/svg"><path d="M14.72 8.79l-4.29 4.3-1.65-1.65a1 1 0 10-1.41 1.41l2.35 2.36a1 1 0 001.41 0l5-5a1.002 1.002 0 10-1.41-1.42zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16.001A8 8 0 0112 20z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-close" xmlns="http://www.w3.org/2000/svg"><path d="M15.71 8.29a1 1 0 00-1.42 0L12 10.59l-2.29-2.3a1.004 1.004 0 10-1.42 1.42l2.3 2.29-2.3 2.29a.999.999 0 000 1.42 1 1 0 001.42 0l2.29-2.3 2.29 2.3a.998.998 0 001.42 0 1.001 1.001 0 000-1.42L13.41 12l2.3-2.29a1.001 1.001 0 000-1.42zm3.36-3.36A10 10 0 104.93 19.07 10 10 0 1019.07 4.93zm-1.41 12.73A8 8 0 1120 12a7.95 7.95 0 01-2.34 5.66z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-error" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a1 1 0 00-1 1v4a1 1 0 002 0V8a1 1 0 00-1-1zm.92 8.62a.758.758 0 00-.09-.18l-.12-.15a.999.999 0 00-1.09-.21 1.15 1.15 0 00-.33.21A1 1 0 0011 16c.002.13.029.26.08.38a.9.9 0 00.54.54.94.94 0 00.76 0 .9.9 0 00.54-.54c.051-.12.078-.25.08-.38a1.362 1.362 0 000-.2.639.639 0 00-.08-.18zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16.001A8 8 0 0112 20z" fill="#07172D"/></symbol>
@@ -59,6 +77,8 @@ for further details on how to create this embeddable sprite variant.
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-new" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16.001A8 8 0 0112 20zm4-9h-3V8a1 1 0 00-2 0v3H8a1 1 0 000 2h3v3a1 1 0 002 0v-3h3a1 1 0 000-2z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-circle-question" xmlns="http://www.w3.org/2000/svg"><path d="M11.29 15.29a1.573 1.573 0 00-.12.15.762.762 0 00-.09.18.643.643 0 00-.06.18 1.362 1.362 0 000 .2.84.84 0 00.08.38.9.9 0 00.54.54.94.94 0 00.76 0 .9.9 0 00.54-.54A1 1 0 0013 16a1 1 0 00-1.71-.71zM12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16.001A8 8 0 0112 20zm0-13a3 3 0 00-2.6 1.5 1 1 0 101.73 1A1 1 0 0112 9a1 1 0 110 2 1 1 0 00-1 1v1a1 1 0 002 0v-.18A3 3 0 0012 7z" fill="#07172D"/></symbol>
 		<symbol fill="none" viewBox="0 0 24 24" id="ui-close" xmlns="http://www.w3.org/2000/svg"><path d="M13.41 12l4.3-4.29a1.004 1.004 0 10-1.42-1.42L12 10.59l-4.29-4.3a1.004 1.004 0 00-1.42 1.42l4.3 4.29-4.3 4.29a1 1 0 000 1.42.998.998 0 001.42 0l4.29-4.3 4.29 4.3a.998.998 0 001.42 0 .997.997 0 00.219-1.095.998.998 0 00-.22-.325L13.41 12z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="ui-pen" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a1 1 0 00-1 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1h6a1 1 0 100-2H5a3 3 0 00-3 3v14a3 3 0 003 3h14a3 3 0 003-3v-6a1 1 0 00-1-1zm-15 .76V17a1 1 0 001 1h4.24a.998.998 0 00.71-.29l6.92-6.93L21.71 8a1.001 1.001 0 000-1.42l-4.24-4.29a1 1 0 00-1.42 0l-2.82 2.83-6.94 6.93a1.001 1.001 0 00-.29.71zm10.76-8.35l2.83 2.83-1.42 1.42-2.83-2.83 1.42-1.42zM8 13.17l5.93-5.93 2.83 2.83L10.83 16H8v-2.83z" fill="#07172D"/></symbol>
+		<symbol fill="none" viewBox="0 0 24 24" id="ui-trash" xmlns="http://www.w3.org/2000/svg"><path d="M10 18a1 1 0 001-1v-6a1 1 0 00-2 0v6a1 1 0 001 1zM20 6h-4V5a3 3 0 00-3-3h-2a3 3 0 00-3 3v1H4a1 1 0 000 2h1v11a3 3 0 003 3h8a3 3 0 003-3V8h1a1 1 0 100-2zM10 5a1 1 0 011-1h2a1 1 0 011 1v1h-4V5zm7 14a1 1 0 01-1 1H8a1 1 0 01-1-1V8h10v11zm-3-1a1 1 0 001-1v-6a1 1 0 00-2 0v6a1 1 0 001 1z" fill="#07172D"/></symbol>
 </svg>
 
 <!--
@@ -99,6 +119,28 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>arrow-down</h2>
 				</li>
+				<li title="arrow-down-chevron">
+					<div class="icon-box">
+
+						<!-- arrow-down-chevron -->
+						<svg class="svg-arrow-down-chevron-dims">
+							<use xlink:href="#arrow-down-chevron"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-down-chevron</h2>
+				</li>
+				<li title="arrow-download">
+					<div class="icon-box">
+
+						<!-- arrow-download -->
+						<svg class="svg-arrow-download-dims">
+							<use xlink:href="#arrow-download"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-download</h2>
+				</li>
 				<li title="arrow-right">
 					<div class="icon-box">
 
@@ -109,6 +151,72 @@ embedded above. They may be styled via CSS.
 
 					</div>
 					<h2>arrow-right</h2>
+				</li>
+				<li title="arrow-up-chevron">
+					<div class="icon-box">
+
+						<!-- arrow-up-chevron -->
+						<svg class="svg-arrow-up-chevron-dims">
+							<use xlink:href="#arrow-up-chevron"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-up-chevron</h2>
+				</li>
+				<li title="arrow-vertical-align-center">
+					<div class="icon-box">
+
+						<!-- arrow-vertical-align-center -->
+						<svg class="svg-arrow-vertical-align-center-dims">
+							<use xlink:href="#arrow-vertical-align-center"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-vertical-align-center</h2>
+				</li>
+				<li title="content-indent-left">
+					<div class="icon-box">
+
+						<!-- content-indent-left -->
+						<svg class="svg-content-indent-left-dims">
+							<use xlink:href="#content-indent-left"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-left</h2>
+				</li>
+				<li title="content-indent-right">
+					<div class="icon-box">
+
+						<!-- content-indent-right -->
+						<svg class="svg-content-indent-right-dims">
+							<use xlink:href="#content-indent-right"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-right</h2>
+				</li>
+				<li title="file-copy-document">
+					<div class="icon-box">
+
+						<!-- file-copy-document -->
+						<svg class="svg-file-copy-document-dims">
+							<use xlink:href="#file-copy-document"></use>
+						</svg>
+
+					</div>
+					<h2>file-copy-document</h2>
+				</li>
+				<li title="ui-check">
+					<div class="icon-box">
+
+						<!-- ui-check -->
+						<svg class="svg-ui-check-dims">
+							<use xlink:href="#ui-check"></use>
+						</svg>
+
+					</div>
+					<h2>ui-check</h2>
 				</li>
 				<li title="ui-circle-check">
 					<div class="icon-box">
@@ -187,6 +295,28 @@ embedded above. They may be styled via CSS.
 					</div>
 					<h2>ui-close</h2>
 				</li>
+				<li title="ui-pen">
+					<div class="icon-box">
+
+						<!-- ui-pen -->
+						<svg class="svg-ui-pen-dims">
+							<use xlink:href="#ui-pen"></use>
+						</svg>
+
+					</div>
+					<h2>ui-pen</h2>
+				</li>
+				<li title="ui-trash">
+					<div class="icon-box">
+
+						<!-- ui-trash -->
+						<svg class="svg-ui-trash-dims">
+							<use xlink:href="#ui-trash"></use>
+						</svg>
+
+					</div>
+					<h2>ui-trash</h2>
+				</li>
 			</ul>
 
 <!--
@@ -219,6 +349,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>arrow-down</h2>
 				</li>
+				<li title="arrow-down-chevron">
+					<div class="icon-box">
+
+						<!-- arrow-down-chevron -->
+						<svg class="svg-arrow-down-chevron-dims">
+							<use xlink:href="sprite.svg#arrow-down-chevron"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-down-chevron</h2>
+				</li>
+				<li title="arrow-download">
+					<div class="icon-box">
+
+						<!-- arrow-download -->
+						<svg class="svg-arrow-download-dims">
+							<use xlink:href="sprite.svg#arrow-download"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-download</h2>
+				</li>
 				<li title="arrow-right">
 					<div class="icon-box">
 
@@ -229,6 +381,72 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 					</div>
 					<h2>arrow-right</h2>
+				</li>
+				<li title="arrow-up-chevron">
+					<div class="icon-box">
+
+						<!-- arrow-up-chevron -->
+						<svg class="svg-arrow-up-chevron-dims">
+							<use xlink:href="sprite.svg#arrow-up-chevron"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-up-chevron</h2>
+				</li>
+				<li title="arrow-vertical-align-center">
+					<div class="icon-box">
+
+						<!-- arrow-vertical-align-center -->
+						<svg class="svg-arrow-vertical-align-center-dims">
+							<use xlink:href="sprite.svg#arrow-vertical-align-center"></use>
+						</svg>
+
+					</div>
+					<h2>arrow-vertical-align-center</h2>
+				</li>
+				<li title="content-indent-left">
+					<div class="icon-box">
+
+						<!-- content-indent-left -->
+						<svg class="svg-content-indent-left-dims">
+							<use xlink:href="sprite.svg#content-indent-left"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-left</h2>
+				</li>
+				<li title="content-indent-right">
+					<div class="icon-box">
+
+						<!-- content-indent-right -->
+						<svg class="svg-content-indent-right-dims">
+							<use xlink:href="sprite.svg#content-indent-right"></use>
+						</svg>
+
+					</div>
+					<h2>content-indent-right</h2>
+				</li>
+				<li title="file-copy-document">
+					<div class="icon-box">
+
+						<!-- file-copy-document -->
+						<svg class="svg-file-copy-document-dims">
+							<use xlink:href="sprite.svg#file-copy-document"></use>
+						</svg>
+
+					</div>
+					<h2>file-copy-document</h2>
+				</li>
+				<li title="ui-check">
+					<div class="icon-box">
+
+						<!-- ui-check -->
+						<svg class="svg-ui-check-dims">
+							<use xlink:href="sprite.svg#ui-check"></use>
+						</svg>
+
+					</div>
+					<h2>ui-check</h2>
 				</li>
 				<li title="ui-circle-check">
 					<div class="icon-box">
@@ -307,6 +525,28 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 					</div>
 					<h2>ui-close</h2>
 				</li>
+				<li title="ui-pen">
+					<div class="icon-box">
+
+						<!-- ui-pen -->
+						<svg class="svg-ui-pen-dims">
+							<use xlink:href="sprite.svg#ui-pen"></use>
+						</svg>
+
+					</div>
+					<h2>ui-pen</h2>
+				</li>
+				<li title="ui-trash">
+					<div class="icon-box">
+
+						<!-- ui-trash -->
+						<svg class="svg-ui-trash-dims">
+							<use xlink:href="sprite.svg#ui-trash"></use>
+						</svg>
+
+					</div>
+					<h2>ui-trash</h2>
+				</li>
 			</ul>
 
 <!--
@@ -315,7 +555,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Tue, 22 Feb 2022 15:14:04 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+			<p>Generated at Tue, 01 Mar 2022 13:49:01 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>

@@ -3,19 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "icons:update": "node ./scripts/update-icons-sprite.js"
+    "icons:update": "node ./scripts/update-icons-sprite.js",
+    "start": "npm run serve"
   },
   "dependencies": {
-    "@vueform/multiselect": "^2.3.2",
-    "@vueuse/core": "^7.6.2",
+    "@vueform/multiselect": "^2.3.3",
+    "@vueuse/core": "^7.7.1",
+    "@vueuse/integrations": "^7.7.1",
+    "axios": "^0.26.0",
     "core-js": "^3.21.1",
+    "date-fns": "^2.28.0",
+    "floating-vue": "^2.0.0-beta.6",
+    "pinia": "^2.0.11",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",
@@ -41,7 +46,8 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "svg-sprite": "^1.5.3",
-    "typescript": "~4.1.5"
+    "typescript": "~4.1.5",
+    "vue-cli-plugin-pinia": "~0.0.6"
   },
   "eslintConfig": {
     "root": true,
@@ -64,7 +70,13 @@
     },
     "rules": {
       "vue/script-setup-uses-vars": "error",
-      "import/prefer-default-export": "off"
+      "import/prefer-default-export": "off",
+      "no-shadow": "off",
+      "@typescript-eslint/no-shadow": [
+        "error"
+      ],
+      "camelcase": "off",
+      "@typescript-eslint/camelcase": "off"
     },
     "overrides": [
       {
@@ -83,6 +95,11 @@
     "last 2 versions",
     "not dead"
   ],
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
@@ -91,10 +108,5 @@
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
   }
 }

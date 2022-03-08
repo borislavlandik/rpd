@@ -97,12 +97,12 @@ const iconName = computed(() => {
 
 .input-title {
   margin-left: 1rem;
-
-  font-weight: 700;
 }
 
 .input-title__required {
   margin-left: -.25rem;
+
+  color: var(--ui-colors-red-dark);
 }
 
 .input-hint {

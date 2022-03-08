@@ -1,0 +1,31 @@
+.v-popper--theme-tooltip .v-popper__inner {
+  background: #07172d;
+  color: #ffffff;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-outer {
+  border-color: #07172d;
+}
+
+.v-popper--theme-tooltip .v-popper__arrow-inner {
+  visibility: hidden;
+}
+
+.dark .v-popper--theme-tooltip .v-popper__inner {
+  background: #ffffff;
+  color: #07172d;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.dark .v-popper--theme-tooltip .v-popper__arrow-outer {
+  border-color: #ffffff;
+}
+
+.dark .v-popper--theme-tooltip .v-popper__arrow-inner {
+  visibility: hidden;
+}

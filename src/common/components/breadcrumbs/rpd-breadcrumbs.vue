@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { RouteMeta, useRoute } from 'vue-router';
 
 import RpdIcon from '@/common/components/icon/rpd-icon.vue';
+import { useGlobalRpdStore } from '@/store/storeCurrentRpd';
+import { storeToRefs } from 'pinia';
 
 interface IBreadcrumb {
   label: string;
@@ -19,18 +21,30 @@ const mainBreadcrumb = computed<IBreadcrumb>(() => ({
   isActive: route.path === '/',
 }));
 
+const store = useGlobalRpdStore();
+const { list } = storeToRefs(store);
+
+function getBreadcrumbLabel(meta: RouteMeta): string {
+  if (meta.breadcrumbsGlobalStore) {
+    return list.value
+      .find((sub) => sub.id.toString() === route.params.id)?.[meta.breadcrumbsGlobalStore]
+      .toString() ?? meta.breadcrumbs;
+  }
+
+  return meta.breadcrumbs;
+}
+
 const breadcrumbs = computed(() => (
   [
     ...(route.name === 'home' ? [] : [mainBreadcrumb.value]),
     ...route.matched.map((p) => ({
-      label: p.meta.breadcrumbs,
+      label: getBreadcrumbLabel(p.meta),
       route: p.path,
       name: p.name,
       isActive: p.name === route.name,
     })),
   ]
 ));
-
 </script>
 
 <template>
