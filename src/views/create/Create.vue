@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import RpdFormButtons from '@/common/components/form/buttons/rpd-form-buttons.vue';
 import RpdInput from '@/common/components/form/input/rpd-input.vue';
 import RpdSelect, { IFormSelectOption } from '@/common/components/form/select/rpd-select.vue';
+import useCreateRpd from './useCreateRpd';
 
 interface ICreateRpdForm {
   subject: string;
@@ -54,6 +55,8 @@ const degrees: IFormSelectOption[] = [
     value: '2',
   },
 ];
+
+const { data } = useCreateRpd();
 </script>
 
 <template>
