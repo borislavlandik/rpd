@@ -31,7 +31,7 @@ export const mainRotes: Array<RouteRecordRaw> = [
   {
     path: '/create',
     name: 'create',
-    component: () => import('@/views/Create.vue'),
+    component: () => import('@/views/create/Create.vue'),
     meta: {
       breadcrumbs: 'Создание рабочей программы',
     },
